@@ -121,6 +121,12 @@ An additional step is required to run Home Assistant as non-root user and use po
 sudo setcap 'cap_net_bind_service=+ep' /srv/homeassistant/homeassistant_venv/bin/python3
 ```
 
+Hassbian users will need to modify above like so: 
+
+```bash
+sudo setcap 'cap_net_bind_service=+ep' /usr/bin/python3.4
+```
+
 ### {% linkable_title License %}
 
 Much of this code is based on work done by Bruce Locke on his [ha-local-echo](https://github.com/blocke/ha-local-echo) project, originally released under the MIT License. The license is located [here](https://github.com/blocke/ha-local-echo/blob/b9bf5dcaae6d8e305e2283179ffba64bde9ed29e/LICENSE).
